@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.primary-container {
+    position: relative;
+    text-align: center;
+    height: 100vh;
+}
+
+.navigation {
+    position: absolute;
+    top: 0.5rem;
+    left: 1.5rem;
+}
+
+.secondary-container {
+    border: 1px solid red;
+    width: 40%;
+    margin: auto;
+    border-radius: 0.5rem;
+    padding: 5rem;
+}
+
+.secondary-container input {
+    display: block;
+    margin: 0.5rem auto;
+    padding: 0.5rem;
+    width: 25%;
+    border: none;
+    border-radius: 0.5rem
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.footer ul{
+    list-style: none;
+}
+
+.footer li {
+    display: inline;
+}
+
