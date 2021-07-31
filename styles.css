@@ -1,3 +1,9 @@
+:root {
+    --primary-bg-color: #0099ff;
+    --primary-shadow-color: #BFDBFE;
+    --primary-btn-color: #FCD34D;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -9,6 +15,12 @@ body {
     height: 100vh;
 }
 
+.primary-bg {
+    max-width: 100%;
+    height: auto;
+    background-size: cover;
+}
+
 .navigation {
     position: absolute;
     top: 0.5rem;
@@ -16,35 +28,67 @@ body {
 }
 
 .secondary-container {
-    border: 1px solid red;
-    width: 40%;
+    border: none;
+    width: 35%;
     margin: auto;
     border-radius: 0.5rem;
     padding: 5rem;
+    box-shadow: 0.5pt 0.5pt 10pt var(--primary-shadow-color);
 }
 
 .secondary-container input {
     display: block;
-    margin: 0.5rem auto;
+    margin: 1rem auto;
     padding: 0.5rem;
-    width: 25%;
-    border: none;
-    border-radius: 0.5rem
+    width: 40%;
+    border-color: transparent;
+    border-radius: 0.5rem;
+    box-shadow: 3pt 3pt 20pt var(--primary-shadow-color);
+}
+
+#input-btn {
+    display: block;
+    margin: 1rem auto;
+    padding: 0.5rem;
+    width: 20%;
+    border-color: transparent;
+    border-radius: 0.5rem;
+    box-shadow: 3pt 3pt 20pt var(--primary-shadow-color);
+    background-color: var(--primary-btn-color);
+    font-weight: bold;
 }
 
 .footer {
     position: absolute;
+    display: block;
     bottom: 0;
     width: 100%;
     margin: auto;
     text-align: center;
+    background-color: var(--primary-bg-color);
 }
 
 .footer ul{
     list-style: none;
 }
 
-.footer li {
-    display: inline;
+#footer-socials {
+    margin: 1rem auto;
+    padding: auto 1rem;
 }
 
+.footer-socials-list li{
+    display: inline;
+    list-style-type: none;
+    margin: auto 0.9rem;
+    text-align: center;
+}
+
+.social-icn{
+    color: black;
+}
+
+#footer-cc-text {
+    display: block;
+    margin: auto;
+}
