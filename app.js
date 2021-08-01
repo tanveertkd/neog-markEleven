@@ -4,6 +4,11 @@ const inputBtn = document.querySelector("#input-btn");
 const secondaryOutput = document.querySelector(".secondary-output");
 const cookiePopup = document.querySelector(".cookie-popup");
 const cookieCloseBtn = document.querySelector("#cookie-close-btn");
+const modal = document.querySelector(".popup-modal");
+const modalCloseBtn = document.querySelector(".popup-modal-close-btn");
+const modalImageUnlucky = document.querySelector(".popup-modal-img-unlucky");
+const modalImageLucky = document.querySelector(".popup-modal-img-lucky");
+const modalText = document.querySelector(".popup-modal-text");
 
 inputBtn.addEventListener("click", () => {
     
@@ -13,8 +18,16 @@ inputBtn.addEventListener("click", () => {
         const luck = checkIfLucky(inputBirthday, inputLuckyNumber);
         if(luck){
             secondaryOutput.innerText = "Yes! Your birthday is lucky!";
+            modal.style.display = "block";
+            modalImageLucky.style.display = "block";
+            modalImageUnlucky.style.display = "none";
+            modalText.innerText = "Yes! Your birthday is lucky!"
         }else{
             secondaryOutput.innerText = "Sorry! It doesn't seem to be lucky.";
+            modal.style.display = "block";
+            modalImageUnlucky.style.display = "block";
+            modalImageLucky.style.display = "none";
+            modalText.innerText = "Sorry! It doesn't seem to be lucky."
         }
     }else{
         secondaryOutput.innerText = "Please check your inputs."
@@ -50,4 +63,8 @@ const checkIfLucky = ((date, number) => {
 
 cookieCloseBtn.addEventListener("click", ()=>{
     cookiePopup.style.display = "none";
+});
+
+modalCloseBtn.addEventListener("click", () => {
+    modal.style.display = "none";
 });
